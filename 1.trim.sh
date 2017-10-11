@@ -43,4 +43,6 @@ trim_galore --illumina --paired -o /root/wgbs/fastq_trim \
 
 ~/myPrograms/Bismark/bismark_methylation_extractor --multicore 62 --gzip --buffer_size 100G --paired-end --ample_memory --comprehensive --cytosine_report --genome_folder /root/resources/HCT116_bs/ HCT116.control.WGBS.run1.1_val_1_bismark_bt2_pe.bam
 ~/myPrograms/Bismark/bismark_methylation_extractor --multicore 62 --gzip --buffer_size 100G --paired-end --ample_memory --comprehensive --cytosine_report --genome_folder /root/resources/HCT116_bs/ HCT116.control.WGBS.run2.1_val_1_bismark_bt2_pe.bam
-
+#
+##
+###
