@@ -58,7 +58,7 @@ chrNames=gsub("chr25","chrM",chrNames,perl=T)
 undiff[,1]=chrNames
 undiff[,3]=undiff[,3]+1
 
-
+options(scipen=999)
 write.table(diff,"fisher_neb_diff.txt",quote=F,row.names=F,col.names=F,sep="\t")
 write.table(undiff,"fisher_neb_undiff.txt",quote=F,row.names=F,col.names=F,sep="\t")
 
