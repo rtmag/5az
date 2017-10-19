@@ -10,3 +10,9 @@ computeMatrix reference-point \
 --sortRegions descend -bs 100 -a 1000 -b 1000 -p 40 -out fisher_neb_diff_und.mat
 
 plotHeatmap --xAxisLabel "" --refPointLabel "CpG" --colorMap Blues -m fisher_neb_diff_und.mat -out atac_diff_undiff.pdf
+
+
+computeMatrix reference-point \
+-S atac_rmdup.bw ctr1.bw ctr2.bw dec1.bw dec2.bw  \
+-R ~/wgbs/fastq_trim/fisher_neb_diff_und.bed --referencePoint center \
+--sortRegions descend -bs 100 -a 1000 -b 1000 -p max -out fisher_neb_diff_und_meth.mat
