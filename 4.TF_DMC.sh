@@ -132,3 +132,34 @@ bamCoverage -p max -bs 1 -e 200 --normalizeUsingRPKM -b /root/TF_encode_quy/bam/
 #
 
 
+
+
+computeMatrix reference-point \
+-S \
+ATF3.bw \
+CBX3.bw \
+CEBPB.bw \
+CTCF.bw \
+EGR1.bw \
+ELF1.bw \
+FOSL1.bw \
+JUND.bw \
+MAX.bw \
+RAD21.bw \
+REST.bw \
+SIN3A.bw \
+SP1.bw \
+SRF.bw \
+TCF7L2.bw \
+TEAD4.bw \
+USF1.bw \
+YY1.bw \
+ZBTB33.bw \
+ZNF274.bw \
+nice25000.bw \
+-R ~/wgbs/fastq_trim/fisher_neb_diff_und.bed --referencePoint center \
+--sortRegions descend -bs 100 -a 1000 -b 1000 -p 40 -out TF.mat
+
+#####
+###
+#
