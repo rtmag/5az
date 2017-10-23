@@ -160,6 +160,9 @@ nice25000.bw \
 -R ~/wgbs/fastq_trim/fisher_neb_diff_und.bed --referencePoint center \
 --sortRegions descend -bs 100 -a 1000 -b 1000 -p 40 -out TF.mat
 
+
+plotHeatmap --xAxisLabel "" --refPointLabel "CpG" --colorMap Blues -m TF.mat -out TF.pdf
+
 #####
 ###
 #
