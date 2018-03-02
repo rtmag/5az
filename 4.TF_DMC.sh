@@ -166,3 +166,19 @@ plotHeatmap --xAxisLabel "" --refPointLabel "CpG" --colorMap Blues -m TF.mat -ou
 #####
 ###
 #
+
+computeMatrix reference-point \
+-S \
+/root/stuff/s/P53_24h_doxo_s1.bw \
+/root/stuff/s/P53_48h_doxo_s1.bw \
+/root/stuff/s/P53_Venkata.bw \
+/root/stuff/s/TP53_48_DMSO.bw \
+/root/stuff/s/TP53_48_DOXO.bw \
+-R ~/wgbs/fastq_trim/fisher_neb_diff_und.bed --referencePoint center \
+--sortRegions descend -bs 100 -a 1000 -b 1000 -p 40 -out p53.mat
+
+
+plotHeatmap --xAxisLabel "" --refPointLabel "CpG" --colorMap Blues -m p53.mat -out p53.pdf
+
+##
+#
