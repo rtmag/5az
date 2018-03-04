@@ -46,3 +46,23 @@ trim_galore --illumina --paired -o /root/wgbs/fastq_trim \
 #
 ##
 ###
+trim_galore --illumina -o /root/decitabine/p53_heatmap/fastq SRR1409974.fastq
+
+/root/myPrograms/STAR/bin/STAR --readFilesIn \
+SRR1409974_trimmed.fq \
+       --outFileNamePrefix SRR1409974_ \
+       --readFilesCommand zcat --runThreadN 30 --genomeDir ~/resources/hg38_noanno/ \
+       --outFilterMultimapNmax 1 \
+ --seedSearchStartLmax 30 \
+       --alignIntronMax 1 --alignEndsType EndToEnd \
+       --outSAMtype BAM SortedByCoordinate
+       
+java -jar /root/myPrograms/picard/build/libs/picard.jar MarkDuplicates REMOVE_DUPLICATES=true I=SRR1409974_Aligned.sortedByCoord.out.bam \
+O=SRR1409974_rmdup.bam  M=SRR1409974.mfile
+       
+samtools index SRR1409974_rmdup.bam
+
+bamCoverage -p max -bs 1 --normalizeUsingRPKM -b SRR1409974_rmdup.bam -o SRR1409974.bw
+
+##
+#
