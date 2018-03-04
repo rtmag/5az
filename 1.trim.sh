@@ -51,7 +51,7 @@ trim_galore --illumina -o /root/decitabine/p53_heatmap/fastq SRR1409974.fastq
 /root/myPrograms/STAR/bin/STAR --readFilesIn \
 SRR1409974_trimmed.fq \
        --outFileNamePrefix SRR1409974_ \
-       --readFilesCommand zcat --runThreadN 30 --genomeDir ~/resources/hg38_noanno/ \
+  --runThreadN 30 --genomeDir ~/resources/hg38_noanno/ \
        --outFilterMultimapNmax 1 \
  --seedSearchStartLmax 30 \
        --alignIntronMax 1 --alignEndsType EndToEnd \
