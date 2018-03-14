@@ -32,10 +32,19 @@ O=/root/decitabine/niceseq/niceseq_25k_rmdup.bam \
 M=/root/decitabine/niceseq/niceseq_25k_rmdup.mfile
 ##
 #
+
+samtools index /root/decitabine/niceseq/niceseq_dec_rmdup.bam
+##
+
+samtools index /root/decitabine/niceseq/niceseq_25k_rmdup.bam
+
+###
+bamCoverage -p max -bs 1 --normalizeUsingRPKM -b /root/decitabine/niceseq/niceseq_dec_rmdup.bam \
+-o /root/decitabine/niceseq/niceseq_dec.bw
+
+
 bamCoverage -p max -bs 1 --normalizeUsingRPKM -b /root/decitabine/niceseq/niceseq_25k_rmdup.bam \
 -o /root/decitabine/niceseq/niceseq_25k.bw
 
-bamCoverage -p max -bs 1 --normalizeUsingRPKM -b /root/decitabine/niceseq/niceseq_dec_rmdup.bam \
--o /root/decitabine/niceseq/niceseq_dec.bw
 ##
 #
