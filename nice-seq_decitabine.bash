@@ -21,12 +21,12 @@ STAR --genomeDir /root/resources/hg38_noanno/ --runThreadN 40 \
 --outSAMtype BAM SortedByCoordinate --outFileNamePrefix /root/decitabine/niceseq/niceseq_25k_
 ##
 #
-java -jar /home/roberto/myPrograms/picard/build/libs/picard.jar MarkDuplicates REMOVE_DUPLICATES=true \
+java -jar /root/myPrograms/picard/build/libs/picard.jar MarkDuplicates REMOVE_DUPLICATES=true \
 I=/root/decitabine/niceseq/niceseq_dec_Aligned.sortedByCoord.out.bam \
 O=/root/decitabine/niceseq/niceseq_dec_rmdup.bam \
 M=/root/decitabine/niceseq/niceseq_dec_rmdup.mfile
 
-java -jar /home/roberto/myPrograms/picard/build/libs/picard.jar MarkDuplicates REMOVE_DUPLICATES=true \
+java -jar /root/myPrograms/picard/build/libs/picard.jar MarkDuplicates REMOVE_DUPLICATES=true \
 I=/root/decitabine/niceseq/niceseq_25k_Aligned.sortedByCoord.out.bam \
 O=/root/decitabine/niceseq/niceseq_25k_rmdup.bam \
 M=/root/decitabine/niceseq/niceseq_25k_rmdup.mfile
