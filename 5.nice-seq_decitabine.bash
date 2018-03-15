@@ -55,7 +55,7 @@ computeMatrix reference-point \
 -S /root/decitabine/niceseq/niceseq_25k.bw \
 /root/decitabine/niceseq/niceseq_dec.bw \
 -R ~/wgbs/fastq_trim/fisher_neb_diff_und.bed --referencePoint center \
---sortRegions descend -bs 100 -a 1000 -b 1000 -p 40 -out niceseq_dec.mat
+--sortRegions descend -bs 10 -a 2000 -b 2000 -p 40 -out niceseq_dec.mat
 
 
 plotHeatmap --xAxisLabel "" --refPointLabel "CpG" --colorMap Blues -m niceseq_dec.mat -out niceseq_dec.pdf
