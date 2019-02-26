@@ -110,6 +110,44 @@ cat /root/annalisa_wgbs/Clean/DT82/FCHNC75CCXY_L7_HUMfpgMAAAGAAA-65_2.fq.gz \
 /root/annalisa_wgbs/Clean/DT82/KG1A_AZA_2uM_72h_2.fq.gz
 ###############################################################################################
 trim_galore --paired --non_directional -o /root/annalisa_wgbs/trimmed/ \
-/root/annalisa_wgbs/trimmed/P007_48h_doxo_1.fq.gz \
-/root/annalisa_wgbs/trimmed/P007_48h_doxo_2.fq.gz &
+/root/annalisa_wgbs/Clean/DT23/KG1A_NAD_5mM_48h_1.fq.gz \
+/root/annalisa_wgbs/Clean/DT23/KG1A_NAD_5mM_48h_2.fq.gz &
+
+trim_galore --paired --non_directional -o /root/annalisa_wgbs/trimmed/ \
+/root/annalisa_wgbs/Clean/DT24/DT24_KG1A_Control_1.fq.gz \
+/root/annalisa_wgbs/Clean/DT24/DT24_KG1A_Control_2.fq.gz &
+
+trim_galore --paired --non_directional -o /root/annalisa_wgbs/trimmed/ \
+/root/annalisa_wgbs/Clean/DT25/KG1A_NAD_5mM_72h_1.fq.gz \
+/root/annalisa_wgbs/Clean/DT25/KG1A_NAD_5mM_72h_2.fq.gz &
+
+trim_galore --paired --non_directional -o /root/annalisa_wgbs/trimmed/ \
+/root/annalisa_wgbs/Clean/DT58/K562_AZA_2uM_48h_1.fq.gz \
+/root/annalisa_wgbs/Clean/DT58/K562_AZA_2uM_48h_2.fq.gz &
+
+trim_galore --paired --non_directional -o /root/annalisa_wgbs/trimmed/ \
+/root/annalisa_wgbs/Clean/DT5/K562_NAD_10mM_48h_1.fq.gz \
+/root/annalisa_wgbs/Clean/DT5/K562_NAD_10mM_48h_2.fq.gz &
+
+trim_galore --paired --non_directional -o /root/annalisa_wgbs/trimmed/ \
+/root/annalisa_wgbs/Clean/DT60/K562_AZA_2uM_72h_1.fq.gz \
+/root/annalisa_wgbs/Clean/DT60/K562_AZA_2uM_72h_2.fq.gz &
+
+trim_galore --paired --non_directional -o /root/annalisa_wgbs/trimmed/ \
+/root/annalisa_wgbs/Clean/DT6/K562_Control_1.fq.gz \
+/root/annalisa_wgbs/Clean/DT6/K562_Control_2.fq.gz &
+
+trim_galore --paired --non_directional -o /root/annalisa_wgbs/trimmed/ \
+/root/annalisa_wgbs/Clean/DT7/K562_NAD_10mM_72h_1.fq.gz \
+/root/annalisa_wgbs/Clean/DT7/K562_NAD_10mM_72h_2.fq.gz &
+
+trim_galore --paired --non_directional -o /root/annalisa_wgbs/trimmed/ \
+/root/annalisa_wgbs/Clean/DT80/KG1A_AZA_2uM_48h_1.fq.gz \
+/root/annalisa_wgbs/Clean/DT80/KG1A_AZA_2uM_48h_2.fq.gz &
+
+trim_galore --paired --non_directional -o /root/annalisa_wgbs/trimmed/ \
+/root/annalisa_wgbs/Clean/DT82/KG1A_AZA_2uM_72h_1.fq.gz \
+/root/annalisa_wgbs/Clean/DT82/KG1A_AZA_2uM_72h_2.fq.gz &
+
+
 
