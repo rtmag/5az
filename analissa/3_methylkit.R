@@ -28,7 +28,7 @@ file.list=list(
 "/root/annalisa_wgbs/bismark_report/DT58_K562_AZA_2uM_48h/DT58_r1_bismark_bt2_pe.CpG_report.txt")
    
 myobj=methRead(file.list,
-           sample.id=list("KG1A_CTRL","KG1A_2uM","KG1A_5uM","K562_CTRL","K562_2uM","K562_5uM"),
+           sample.id=list("KG1A_CTRL","KG1A_2uM"),
            assembly="hg38",
            treatment=c(0,1),
            context="CpG",
