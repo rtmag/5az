@@ -22,10 +22,21 @@ myobj=methRead(file.list,
 
 meth=unite(myobj, destrand=TRUE,mc.cores=40)
 
-#Pooled
-pooled.meth=pool(meth,sample.ids=c("decitabine","control"))
-pooled.meth=filterByCoverage(pooled.meth,lo.count=3)
-pooled.myDiff=calculateDiffMeth(pooled.meth,num.cores=40)
-##
+######################## KG1A CTRL VS KG1A 2uM ###########################################################
+file.list=list(
+"/root/annalisa_wgbs/bismark_report/DT24_KG1A_Control/DT24_r1_bismark_bt2_pe.CpG_report.txt",
+"/root/annalisa_wgbs/bismark_report/DT58_K562_AZA_2uM_48h/DT58_r1_bismark_bt2_pe.CpG_report.txt")
+   
+myobj=methRead(file.list,
+           sample.id=list("KG1A_CTRL","KG1A_2uM","KG1A_5uM","K562_CTRL","K562_2uM","K562_5uM"),
+           assembly="hg38",
+           treatment=c(0,1),
+           context="CpG",
+           pipeline="bismarkCytosineReport",
+           header=FALSE,
+           mincov=4)
+
+meth=unite(myobj, destrand=TRUE,mc.cores=40)
+pooled.myDiff=calculateDiffMeth(meth,num.cores=40)
 
 
