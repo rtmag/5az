@@ -14,3 +14,5 @@
 ~/myPrograms/sra-tools/sratoolkit.2.9.0-centos_linux64/bin/fastq-dump --split-files \
 -Z SRR5724759 > SRR5724759_MCF7_Input.fastq &
 #######################################################################################
+
+
