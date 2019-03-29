@@ -25,6 +25,11 @@ plot(data[,8],-log10(data[,9]),xlab="Log2FC",main = "SW48 cells: Decitabine Trea
   points(data[,8][data[,1] %in% c2[,1]],
        -log10(data[,9])[data[,1] %in% c2[,1]],
       col=alpha("green",.5),pch=20)
+
+  points(data[,8][which(data[,1]=="CDKN1A")],
+       -log10(data[,9])[which(data[,1]=="CDKN1A")],
+      col=alpha("red",1),pch=20)
+
                         
   legend("topright", paste("Decitabine",":",length(which(data[,8]>1 & data[,9]<0.05))), bty="n") 
   legend("topleft",  paste("Control",":",length(which(data[,8]<(-1) & data[,9]<0.05))), bty="n") 
